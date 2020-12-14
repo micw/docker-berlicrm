@@ -1,0 +1,16 @@
+---
+
+version: '3'
+services:
+  crm:
+    build: .
+    ports:
+      - 80:80
+  db:
+    image: mariadb:10.4.17
+    environment:
+      MYSQL_ROOT_PASSWORD: r
+      MYSQL_USER: crm
+      MYSQL_PASSWORD: crm
+      MYSQL_DATABASE: crm
+
